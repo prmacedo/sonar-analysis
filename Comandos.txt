@@ -1,0 +1,15 @@
+docker-compose run --rm -v /home/paulo/Projetos/flutter/sonar_test/:/usr/src/flutter/ sonar-scanner-cli -Dsonar.projectKey=flutter -Dsonar.projectName=flutter  -Dsonar.host.url=http://172.17.0.1:9000 -Dsonar.login=admin -Dsonar.password=Admin123456* -Dsonar.exclusions=**/*.java > sonar_analysis.log 2>&1
+
+docker-compose run --rm -v /home/paulo/Projetos/observatorio-frontend:/usr/src/observatorio-frontend sonar-scanner-cli \
+  -Dsonar.projectKey=observatorio-frontend \
+  -Dsonar.projectName=observatorio-frontend \
+  -Dsonar.sources=observatorio-frontend \
+  -Dsonar.host.url=http://172.17.0.1:9000 \
+  -Dsonar.login=admin \
+  -Dsonar.password=admin \
+  -Dsonar.exclusions=**/*.java > sonar_analysis.log 2>&1
+
+
+timestamp=$(date +"%Y%m%d_%H%M%S")
+
+curl -u admin:admin "http://172.17.0.1:9000/api/measures/component?component=obi&metricKeys=bugs,new_bugs,vulnerabilities,new_vulnerabilities,code_smells,new_code_smells,high_impact_accepted_issues,new_blocker_violations,new_critical_violations,new_major_violations,new_minor_violations,new_info_violations,blocker_violations,critical_violations,major_violations,minor_violations,info_violations,security_hotspots,complexity,cognitive_complexity,coverage,line_coverage,branch_coverage,ncloc,lines,files,functions,statements,comment_lines,comment_lines_density,software_quality_blocker_issues,software_quality_high_issues,software_quality_info_issues,software_quality_medium_issues,software_quality_low_issues,software_quality_maintainability_issues,software_quality_reliability_issues,software_quality_security_issues,new_software_quality_blocker_issues,new_software_quality_high_issues,new_software_quality_info_issues,new_software_quality_medium_issues,new_software_quality_low_issues,new_software_quality_maintainability_issues,new_software_quality_reliability_issues,new_software_quality_security_issues" -o "sonar-analysis-$timestamp.json"

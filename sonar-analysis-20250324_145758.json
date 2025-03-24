@@ -1,0 +1,29 @@
+{
+  "component": {
+    "key": "observatorio-frontend",
+    "name": "observatorio-frontend",
+    "qualifier": "TRK",
+    "measures": [
+      { "metric": "cognitive_complexity", "value": "0", "bestValue": true },
+      { "metric": "coverage", "value": "0.0", "bestValue": false },
+      { "metric": "minor_violations", "value": "3", "bestValue": false },
+      { "metric": "bugs", "value": "5", "bestValue": false },
+      { "metric": "line_coverage", "value": "0.0", "bestValue": false },
+      { "metric": "critical_violations", "value": "0", "bestValue": true },
+      { "metric": "lines", "value": "15249" },
+      { "metric": "functions", "value": "3" },
+      { "metric": "complexity", "value": "7" },
+      { "metric": "info_violations", "value": "0", "bestValue": true },
+      { "metric": "vulnerabilities", "value": "0", "bestValue": true },
+      { "metric": "security_hotspots", "value": "0", "bestValue": true },
+      { "metric": "blocker_violations", "value": "0", "bestValue": true },
+      { "metric": "ncloc", "value": "1345" },
+      { "metric": "files", "value": "249" },
+      { "metric": "major_violations", "value": "2", "bestValue": false },
+      { "metric": "comment_lines_density", "value": "0.6", "bestValue": false },
+      { "metric": "comment_lines", "value": "8" },
+      { "metric": "statements", "value": "17" },
+      { "metric": "code_smells", "value": "0", "bestValue": true }
+    ]
+  }
+}

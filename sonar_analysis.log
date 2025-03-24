@@ -1,0 +1,147 @@
+Creating sonar-analysis_sonar-scanner-cli_run ... 
+Creating sonar-analysis_sonar-scanner-cli_run ... done
+18:52:13.823 INFO  Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+18:52:13.827 INFO  Project root configuration file: NONE
+18:52:13.837 INFO  SonarScanner CLI 7.0.2.4839
+18:52:13.839 INFO  Java 17.0.14 Amazon.com Inc. (64-bit)
+18:52:13.839 INFO  Linux 5.15.0-134-generic amd64
+18:52:13.862 INFO  User cache: /opt/sonar-scanner/.sonar/cache
+18:52:14.695 INFO  Communicating with SonarQube Server 9.9.8.100196
+18:52:15.074 INFO  Load global settings
+18:52:15.155 INFO  Load global settings (done) | time=83ms
+18:52:15.156 INFO  Server id: 147B411E-AZXJfxBIfOJo39q5S3ux
+18:52:15.159 INFO  User cache: /opt/sonar-scanner/.sonar/cache
+18:52:15.164 INFO  Load/download plugins
+18:52:15.164 INFO  Load plugins index
+18:52:15.217 INFO  Load plugins index (done) | time=53ms
+18:52:15.283 INFO  Load/download plugins (done) | time=119ms
+18:52:15.889 INFO  Process project properties
+18:52:15.898 INFO  Process project properties (done) | time=9ms
+18:52:15.902 INFO  Execute project builders
+18:52:15.905 INFO  Execute project builders (done) | time=3ms
+18:52:15.910 INFO  Project key: observatorio-frontend
+18:52:15.911 INFO  Base dir: /usr/src
+18:52:15.911 INFO  Working dir: /tmp/.scannerwork
+18:52:15.926 INFO  Load project settings for component key: 'observatorio-frontend'
+18:52:16.095 WARN  SCM provider autodetection failed. Please use "sonar.scm.provider" to define SCM of your project, or disable the SCM Sensor in the project settings.
+18:52:16.109 INFO  Load quality profiles
+18:52:16.275 INFO  Load quality profiles (done) | time=167ms
+18:52:16.290 INFO  Load active rules
+18:52:18.362 INFO  Load active rules (done) | time=2072ms
+18:52:18.367 INFO  Load analysis cache
+18:52:18.378 INFO  Load analysis cache (404) | time=11ms
+18:52:18.417 INFO  Load project repositories
+18:52:18.421 INFO  Load project repositories (done) | time=4ms
+18:52:18.451 INFO  Indexing files...
+18:52:18.451 INFO  Project configuration:
+18:52:20.751 WARN  File '/usr/src/observatorio-frontend/node_modules/@next/swc-linux-x64-gnu/next-swc.linux-x64-gnu.node' is bigger than 20MB and as consequence is removed from the analysis scope.
+18:52:20.752 WARN  File '/usr/src/observatorio-frontend/node_modules/@next/swc-linux-x64-musl/next-swc.linux-x64-musl.node' is bigger than 20MB and as consequence is removed from the analysis scope.
+18:52:21.084 INFO  7729 files indexed
+18:52:21.085 INFO  Quality profile for css: Sonar way
+18:52:21.085 INFO  Quality profile for js: Sonar way
+18:52:21.085 INFO  Quality profile for json: Sonar way
+18:52:21.085 INFO  Quality profile for ts: Sonar way
+18:52:21.085 INFO  Quality profile for web: Sonar way
+18:52:21.085 INFO  ------------- Run sensors on module observatorio-frontend
+18:52:21.151 INFO  Load metrics repository
+18:52:21.184 INFO  Load metrics repository (done) | time=33ms
+18:52:22.253 INFO  Sensor JaCoCo XML Report Importer [jacoco]
+18:52:22.254 INFO  'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+18:52:22.255 INFO  No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+18:52:22.255 INFO  Sensor JaCoCo XML Report Importer [jacoco] (done) | time=2ms
+18:52:22.255 INFO  Sensor IaC CloudFormation Sensor [iac]
+18:52:22.977 INFO  0 source files to be analyzed
+18:52:23.198 INFO  0/0 source files have been analyzed
+18:52:23.198 INFO  Sensor IaC CloudFormation Sensor [iac] (done) | time=943ms
+18:52:23.198 INFO  Sensor IaC Kubernetes Sensor [iac]
+18:52:23.449 INFO  0 source files to be analyzed
+18:52:23.689 INFO  0/0 source files have been analyzed
+18:52:23.689 INFO  Sensor IaC Kubernetes Sensor [iac] (done) | time=491ms
+18:52:23.689 INFO  Sensor JavaScript analysis [javascript]
+18:52:26.093 INFO  4 source files to be analyzed
+18:52:27.745 INFO  4/4 source files have been analyzed
+18:52:27.746 INFO  Hit the cache for 0 out of 4
+18:52:27.747 INFO  Miss the cache for 4 out of 4: ANALYSIS_MODE_INELIGIBLE [4/4]
+18:52:27.747 INFO  Sensor JavaScript analysis [javascript] (done) | time=4058ms
+18:52:27.747 INFO  Sensor TypeScript analysis [javascript]
+18:52:27.776 INFO  Found 1 tsconfig.json file(s): [/usr/src/observatorio-frontend/tsconfig.json]
+18:52:27.777 INFO  240 source files to be analyzed
+18:52:27.777 INFO  Creating TypeScript program
+18:52:27.777 INFO  TypeScript configuration file /usr/src/observatorio-frontend/tsconfig.json
+18:52:27.794 ERROR Error: Argument for '--moduleResolution' option must be: 'node', 'classic', 'node16', 'nodenext'.
+18:52:27.794 ERROR     at createProgramOptions (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/lib/services/program/program.js:106:15)
+18:52:27.794 ERROR     at createProgram (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/lib/services/program/program.js:132:28)
+18:52:27.795 ERROR     at default_1 (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/lib/routing/on-create-program.js:10:57)
+18:52:27.795 ERROR     at Layer.handle [as handle_request] (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/node_modules/express/lib/router/layer.js:95:5)
+18:52:27.795 ERROR     at next (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/node_modules/express/lib/router/route.js:144:13)
+18:52:27.795 ERROR     at Route.dispatch (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/node_modules/express/lib/router/route.js:114:3)
+18:52:27.795 ERROR     at Layer.handle [as handle_request] (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/node_modules/express/lib/router/layer.js:95:5)
+18:52:27.795 ERROR     at /tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/node_modules/express/lib/router/index.js:284:15
+18:52:27.795 ERROR     at Function.process_params (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/node_modules/express/lib/router/index.js:346:12)
+18:52:27.795 ERROR     at next (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/node_modules/express/lib/router/index.js:280:10)
+18:52:27.796 ERROR Failed to create program: Argument for '--moduleResolution' option must be: 'node', 'classic', 'node16', 'nodenext'.
+18:52:27.796 INFO  Creating TypeScript program (done) | time=19ms
+18:52:27.796 INFO  Skipped 240 file(s) because they were not part of any tsconfig.json (enable debug logs to see the full list)
+18:52:27.797 INFO  240/240 source files have been analyzed
+18:52:27.797 INFO  Hit the cache for 0 out of 0
+18:52:27.797 INFO  Miss the cache for 0 out of 0
+18:52:27.797 INFO  Sensor TypeScript analysis [javascript] (done) | time=50ms
+18:52:27.797 INFO  Sensor CSS Rules [javascript]
+18:52:27.806 INFO  5 source files to be analyzed
+18:52:27.919 ERROR SyntaxError: Unexpected token r in JSON at position 0
+18:52:27.919 ERROR     at JSON.parse (<anonymous>)
+18:52:27.919 ERROR     at Object.parseSourceMapInput (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/node_modules/source-map-js/lib/util.js:539:15)
+18:52:27.919 ERROR     at new SourceMapConsumer (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/node_modules/source-map-js/lib/source-map-consumer.js:17:22)
+18:52:27.919 ERROR     at PreviousMap.consumer (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/node_modules/postcss/lib/previous-map.js:33:28)
+18:52:27.919 ERROR     at new Input (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/node_modules/postcss/lib/input.js:52:24)
+18:52:27.919 ERROR     at parseStyle (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/node_modules/postcss-syntax/parse-style.js:118:10)
+18:52:27.920 ERROR     at processor (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/node_modules/postcss-syntax/processor.js:26:9)
+18:52:27.920 ERROR     at Function.parse (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/node_modules/postcss-syntax/parse.js:25:10)
+18:52:27.920 ERROR     at new LazyResult (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/node_modules/postcss/lib/lazy-result.js:133:16)
+18:52:27.920 ERROR     at getPostcssResult (/tmp/.scannerwork/.sonartmp/eslint-bridge-bundle/package/node_modules/stylelint/lib/getPostcssResult.js:77:30)
+18:52:28.019 INFO  5/5 source files have been analyzed
+18:52:28.019 INFO  Hit the cache for 0 out of 0
+18:52:28.019 INFO  Miss the cache for 0 out of 0
+18:52:28.019 INFO  Sensor CSS Rules [javascript] (done) | time=222ms
+18:52:28.019 INFO  Sensor CSS Metrics [javascript]
+18:52:28.037 INFO  Sensor CSS Metrics [javascript] (done) | time=18ms
+18:52:28.037 INFO  Sensor C# Project Type Information [csharp]
+18:52:28.040 INFO  Sensor C# Project Type Information [csharp] (done) | time=3ms
+18:52:28.040 INFO  Sensor C# Analysis Log [csharp]
+18:52:28.049 INFO  Sensor C# Analysis Log [csharp] (done) | time=8ms
+18:52:28.049 INFO  Sensor C# Properties [csharp]
+18:52:28.049 INFO  Sensor C# Properties [csharp] (done) | time=0ms
+18:52:28.049 INFO  Sensor HTML [web]
+18:52:28.525 INFO  Sensor HTML [web] (done) | time=476ms
+18:52:28.525 INFO  Sensor TextAndSecretsSensor [text]
+18:52:28.534 INFO  1303 source files to be analyzed
+18:52:30.259 INFO  1303/1303 source files have been analyzed
+18:52:30.259 INFO  Sensor TextAndSecretsSensor [text] (done) | time=1734ms
+18:52:30.260 INFO  Sensor VB.NET Project Type Information [vbnet]
+18:52:30.262 INFO  Sensor VB.NET Project Type Information [vbnet] (done) | time=2ms
+18:52:30.262 INFO  Sensor VB.NET Analysis Log [vbnet]
+18:52:30.268 INFO  Sensor VB.NET Analysis Log [vbnet] (done) | time=6ms
+18:52:30.268 INFO  Sensor VB.NET Properties [vbnet]
+18:52:30.268 INFO  Sensor VB.NET Properties [vbnet] (done) | time=0ms
+18:52:30.268 INFO  Sensor IaC Docker Sensor [iac]
+18:52:30.293 INFO  0 source files to be analyzed
+18:52:30.343 INFO  0/0 source files have been analyzed
+18:52:30.343 INFO  Sensor IaC Docker Sensor [iac] (done) | time=75ms
+18:52:30.346 INFO  ------------- Run sensors on project
+18:52:30.379 INFO  Sensor Analysis Warnings import [csharp]
+18:52:30.380 INFO  Sensor Analysis Warnings import [csharp] (done) | time=1ms
+18:52:30.380 INFO  Sensor Zero Coverage Sensor
+18:52:30.414 INFO  Sensor Zero Coverage Sensor (done) | time=34ms
+18:52:30.415 INFO  SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+18:52:30.422 INFO  CPD Executor 3 files had no CPD blocks
+18:52:30.422 INFO  CPD Executor Calculating CPD for 5 files
+18:52:30.431 INFO  CPD Executor CPD calculation finished (done) | time=9ms
+18:52:30.531 INFO  Analysis report generated in 95ms, dir size=1.1 MB
+18:52:30.637 INFO  Analysis report compressed in 105ms, zip size=386.7 kB
+18:52:30.790 INFO  Analysis report uploaded in 153ms
+18:52:30.791 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://172.17.0.1:9000/dashboard?id=observatorio-frontend
+18:52:30.791 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+18:52:30.791 INFO  More about the report processing at http://172.17.0.1:9000/api/ce/task?id=AZXJf8y7fOJo39q5TBoI
+18:52:36.530 INFO  Analysis total time: 21.157 s
+18:52:36.531 INFO  EXECUTION SUCCESS
+18:52:36.532 INFO  Total time: 22.711s
