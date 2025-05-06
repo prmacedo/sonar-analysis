@@ -4,11 +4,11 @@
 
 1. Instalar python e docker
 
-2. Adicionar caminho da raiz do projeto a ser analisado nas variáveis `PROJECT_PATH` e `OUTPUT_PATH` no arquivo `.env`, além de se identificar na variável `PARTICIPANT`
+2. Criar e ativar ambiente virtual do python (venv)
 
-3. Criar e ativar ambiente virtual do python (venv)
+3. Instalar dependências `pip install -r requirements.txt`
 
-4. Instalar dependências `pip install -r requirements.txt`
+4. Rodar o comando `python setup.py` para configurar o caminho da raiz do projeto a ser analisado nas variáveis `PROJECT_PATH` e `OUTPUT_PATH` no arquivo `.env`, além de se identificar na variável `PARTICIPANT`
 
 5. Rodar comando `python main.py`
 
