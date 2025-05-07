@@ -27,7 +27,6 @@ def prompt_env_variable(var_name, current_value=None):
     else:
       raise ValueError(f"{var_name} is required and cannot be empty.")
 
-  # Check for folder existence if applicable
   if var_name in ("PROJECT_PATH", "OUTPUT_PATH"):
     path = Path(value).expanduser().resolve()
     if not path.is_dir():
@@ -42,11 +41,8 @@ def setup_env():
 
   for key in ENV_KEYS:
     current_value = current_env.get(key)
-
+    
     try:
-      if current_value:
-        continue
-
       new_value = prompt_env_variable(key, current_value)
       current_env[key] = new_value
       updated = True
