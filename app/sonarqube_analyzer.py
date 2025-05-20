@@ -54,8 +54,9 @@ class SonarQubeAnalyzer:
         if response.status_code == 200 and response.json().get("status") == "UP":
           print("SonarQube is ready!")
           break
-      except requests.exceptions.RequestException:
-        pass
+      except requests.exceptions.RequestException as e:
+        print(f"An error occurred: {e}")
+      print(f"Trying again in a few seconds...")
       time.sleep(10)
 
   def generate_token(self):
