@@ -6,7 +6,7 @@ def read_env_file(file_path=".env"):
   env = {}
   if not Path(file_path).exists():
     return env
-  with open(file_path, "r") as f:
+  with open(file_path, "r", encoding="utf-8") as f:
     for line in f:
       if line.strip() and not line.startswith("#") and "=" in line:
         key, value = line.strip().split("=", 1)
@@ -41,7 +41,7 @@ def setup_env():
 
   for key in ENV_KEYS:
     current_value = current_env.get(key)
-    
+
     try:
       new_value = prompt_env_variable(key, current_value)
       current_env[key] = new_value
@@ -52,7 +52,7 @@ def setup_env():
       raise
 
   if updated:
-    with open(".env", "w") as f:
+    with open(".env", "w", encoding="utf-8") as f:
       for key in ENV_KEYS:
         value = current_env.get(key, "")
         f.write(f"{key}={value}\n")
