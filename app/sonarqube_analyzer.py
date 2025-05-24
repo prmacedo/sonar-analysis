@@ -130,15 +130,15 @@ class SonarQubeAnalyzer:
       raise ValueError("PARTICIPANT is not defined or is empty")
 
     if not self.project_path:
-        raise ValueError("PROJECT_PATH is not defined or is empty")
+      raise ValueError("PROJECT_PATH is not defined or is empty")
 
     try:
-        self.start_docker()
-        self.wait_for_sonarqube()
-        token = self.generate_token()
-        self.run_sonar_scanner(token)
-        metrics = self.collect_metrics(token)
-        self.save_to_csv(metrics)
+      self.start_docker()
+      self.wait_for_sonarqube()
+      token = self.generate_token()
+      self.run_sonar_scanner(token)
+      metrics = self.collect_metrics(token)
+      self.save_to_csv(metrics)
     finally:
-        self.stop_docker()
+      self.stop_docker()
 
