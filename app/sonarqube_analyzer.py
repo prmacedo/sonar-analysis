@@ -43,14 +43,14 @@ class SonarQubeAnalyzer:
 
   def start_docker(self):
     print("Iniciando contêineres Docker...")
-    stdout, stderr = self.run_command("docker-compose up -d")
+    stdout, stderr = self.run_command("docker compose up -d")
     print("Docker start STDOUT:", stdout)
     if stderr:
       print("Docker start STDERR:", stderr)
 
   def stop_docker(self):
     print("Removendo contêineres Docker...")
-    stdout, stderr = self.run_command("docker-compose down")
+    stdout, stderr = self.run_command("docker compose down")
     print("Docker stop STDOUT:", stdout)
     if stderr:
       print("Docker stop STDERR:", stderr)
@@ -100,7 +100,7 @@ class SonarQubeAnalyzer:
     # O workdir dentro do container será /usr/src/{self.project_key}
     # sonar.sources=. significa que as fontes estão no diretório de trabalho atual do scanner
     command = (
-        f"docker-compose run --rm "
+        f"docker compose run --rm "
         f"-e SONAR_TOKEN={token} " # Passar token como var de ambiente, embora sonar.login seja o principal
         f"--workdir /usr/src/{self.project_key} " # Define o diretório de trabalho dentro do container
         f"-v \"{absolute_project_path}:/usr/src/{self.project_key}\" " # Monta o projeto
