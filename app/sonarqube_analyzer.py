@@ -30,6 +30,8 @@ class SonarQubeAnalyzer:
     self.output_path = os.getenv('OUTPUT_PATH')
     self.participant = os.getenv('PARTICIPANT')
     self.project_path = os.getenv('PROJECT_PATH')
+    
+    self.sonar_exclusions = os.getenv('SONAR_EXCLUSIONS', '**/.venv/**,**/node_modules/**,**/tmp/**,**/build/**,**/__pycache__/**,**/.git/**,**/.idea/**,**/target/**,**/out/**,**/dist/**,**/bin/**,**/obj/**')
 
   def get_project_key(self, project_path):
     if not project_path: # Adicionar verificação para project_path nulo ou vazio
@@ -112,6 +114,7 @@ class SonarQubeAnalyzer:
         f"-Dsonar.login={token} "
         f"-Dsonar.verbose=true " # Habilita logs detalhados do scanner
         f"-Dsonar.scm.disabled=true " # Desabilita SCM para evitar erros se .git não estiver presente ou configurado
+        f"-Dsonar.exclusions={self.sonar_exclusions}"
     )
     print(f"Executando comando do scanner: {command}")
     stdout, stderr = self.run_command(command)
